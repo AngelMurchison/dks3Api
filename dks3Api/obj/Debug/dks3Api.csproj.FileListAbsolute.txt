@@ -75,3 +75,5 @@ c:\users\angel murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\b
 c:\users\angel murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.csprojResolveAssemblyReference.cache
 c:\users\angel murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.dll
 c:\users\angel murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.pdb
+C:\Users\Angel Murchison\Documents\Visual Studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.init.resources
+C:\Users\Angel Murchison\Documents\Visual Studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.csproj.GenerateResource.Cache

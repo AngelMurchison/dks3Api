@@ -187,9 +187,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704080615036_init.cs" />
-    <Compile Include="Migrations\201704080615036_init.Designer.cs">
-      <DependentUpon>201704080615036_init.cs</DependentUpon>
+    <Compile Include="Migrations\201704102230554_Init..cs" />
+    <Compile Include="Migrations\201704102230554_Init..Designer.cs">
+      <DependentUpon>201704102230554_Init..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704102256117_Created datamodel Draft 1.cs" />
+    <Compile Include="Migrations\201704102256117_Created datamodel Draft 1.Designer.cs">
+      <DependentUpon>201704102256117_Created datamodel Draft 1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext.cs" />
@@ -268,8 +272,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704080615036_init.resx">
-      <DependentUpon>201704080615036_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704102230554_Init..resx">
+      <DependentUpon>201704102230554_Init..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704102256117_Created datamodel Draft 1.resx">
+      <DependentUpon>201704102256117_Created datamodel Draft 1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

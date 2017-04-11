@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JsonToEFSeed
+{
+    class Program
+    {
+        public class jsonWeapon
+        {
+            public string Weapon { get; set; }
+            public int STR { get; set; }
+            public int DEX { get; set; }
+            public int INT { get; set; }
+            public int FTH { get; set; }
+            public int Crit { get; set; }
+            public int Phy { get; set; }
+            public int Magic { get; set; }
+            public int Fire { get; set; }
+            public int Light { get; set; }
+            public int Dark { get; set; }
+            public int Bleed { get; set; }
+            public int Poison { get; set; }
+            public int Frost { get; set; }
+            public string WeaponType { get; set; }
+        }
+        public class RootObject
+        {
+            public List<jsonWeapon> weapons { get; set; }
+        }
+        public static void logWeaponProperties(RootObject obj)
+        {
+            foreach (var weapon in obj.weapons)
+            {
+                Console.WriteLine($"Weapon name: {weapon.Weapon}");
+                Console.WriteLine(weapon.STR);
+                Console.WriteLine(weapon.DEX);
+                Console.WriteLine(weapon.INT);
+                Console.WriteLine(weapon.FTH);
+                Console.WriteLine(weapon.Crit);
+                Console.WriteLine(weapon.Phy);
+                Console.WriteLine(weapon.Magic);
+                Console.WriteLine(weapon.Fire);
+                Console.WriteLine(weapon.Light);
+                Console.WriteLine(weapon.Dark);
+                Console.WriteLine(weapon.Bleed);
+                Console.WriteLine(weapon.Poison);
+                Console.WriteLine(weapon.Frost);
+                Console.WriteLine($"Weapon Type: {weapon.WeaponType}");
+            }
+        }
+        public static void logSeed(RootObject obj)
+        {
+            var counter = 0;
+            foreach (var json in obj.weapons)
+            {
+                Console.WriteLine
+                ($"var weapon{counter} = new Weapon() \n {{Name = \"{json.Weapon}\", \n AttackPower = new AttackPower() \n {{ \n Magic = {json.Magic}, \n Physical = {json.Phy}, \n Critical = {json.Crit}, \n Dark = {json.Dark}, \n Fire = {json.Fire}, \n Lightning = {json.Light} \n }}, \n StatRequirement = new StatRequirements() \n {{ \n Strength = {json.STR}, \n Dexterity = {json.DEX}, \n Faith = {json.FTH}, \n Intelligence = {json.INT} \n }}, \n AdditionalEffects = new AdditionalEffects() \n {{ \n Bleed = {json.Bleed}, \n Poison = {json.Poison}, \n Frost = {json.Frost} \n }} \n }};");
+                counter++;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            var url = "https://www.dswepfilter.com/weps.json";
+            var request = WebRequest.Create(url);
+            var rawResponse = String.Empty;
+            var response = request.GetResponse();
+
+            using (var reader = new StreamReader(response.GetResponseStream()))
+            {
+                rawResponse = reader.ReadToEnd();
+            }
+            var weapondata = JsonConvert.DeserializeObject<RootObject>(rawResponse);
+
+            //logWeaponProperties(weapondata);
+            //Console.ReadLine();
+            logSeed(weapondata);
+            Console.ReadLine();
+        }
+    }
+}

@@ -25,7 +25,7 @@ namespace dks3Api.Models
         [Display(Name = "Weapon Arts Description")]
         public string WeaponArtsDescription { get; set; }
         [Display(Name = "FP Cost")]
-        public string FPcost { get; set; }
+        public int? FPcost { get; set; }
     }
 
     public class StatRequirements

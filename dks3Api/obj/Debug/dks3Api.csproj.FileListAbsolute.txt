@@ -80,3 +80,5 @@ C:\Users\Angel Murchison\Documents\Visual Studio 2017\Projects\dks3Api\dks3Api\o
 C:\Users\Angel Murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.CreateddatamodelDraft1.resources
 C:\Users\Angel Murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.Addedseeddata.resources
 C:\Users\Angel Murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.Numericalpropertiesarenullable.resources
+C:\Users\Angel Murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.Addedweaponconstructor.resources
+C:\Users\Angel Murchison\documents\visual studio 2017\Projects\dks3Api\dks3Api\obj\Debug\dks3Api.Migrations.RenullabledtheWeaponProps.resources

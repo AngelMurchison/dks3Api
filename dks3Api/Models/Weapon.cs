@@ -10,10 +10,22 @@ namespace dks3Api.Models
 
     public class Weapon
     {
+        public Weapon()
+        {
+            this.WeaponClass = new WeaponClass();
+            this.WeaponArt = new WeaponArt();
+            this.AttackPower = new AttackPower();
+            this.DamageAbsorption = new DamageAbsorption();
+            this.DamageScaling = new DamageScaling();
+            this.AdditionalEffects = new AdditionalEffects();
+            this.StatRequirements = new StatRequirements();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public double Weight { get; set; }
         public int? Durability { get; set; }
+        public string NewColumn { get; set; }
 
         #region WeaponProps
         [Display(Name = "Damage Type")] public string DamageType { get; set; }
@@ -23,7 +35,7 @@ namespace dks3Api.Models
         [Display(Name = "Damage Absorption")] public DamageAbsorption DamageAbsorption { get; set; }
         [Display(Name = "Damage Scaling")] public DamageScaling DamageScaling { get; set; }
         [Display(Name = "Additional Effects")] public AdditionalEffects AdditionalEffects { get; set; }
-        [Display(Name = "Stat Requirements")] public StatRequirements StatRequirement { get; set; }
+        [Display(Name = "Stat Requirements")] public StatRequirements StatRequirements { get; set; }
         #endregion
     }
 }

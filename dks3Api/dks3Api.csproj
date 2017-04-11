@@ -203,6 +203,14 @@
     <Compile Include="Migrations\201704111730071_Numerical properties are nullable.Designer.cs">
       <DependentUpon>201704111730071_Numerical properties are nullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704111919260_Added weapon constructor.cs" />
+    <Compile Include="Migrations\201704111919260_Added weapon constructor.Designer.cs">
+      <DependentUpon>201704111919260_Added weapon constructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111933573_Re-nullabled the WeaponProps.cs" />
+    <Compile Include="Migrations\201704111933573_Re-nullabled the WeaponProps.Designer.cs">
+      <DependentUpon>201704111933573_Re-nullabled the WeaponProps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Weapon.cs" />
@@ -291,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704111730071_Numerical properties are nullable.resx">
       <DependentUpon>201704111730071_Numerical properties are nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111919260_Added weapon constructor.resx">
+      <DependentUpon>201704111919260_Added weapon constructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111933573_Re-nullabled the WeaponProps.resx">
+      <DependentUpon>201704111933573_Re-nullabled the WeaponProps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

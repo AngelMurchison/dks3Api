@@ -2,12 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace JsonToEFSeed
+namespace EFSeedGenerator
 {
     class Program
     {
@@ -60,7 +57,8 @@ namespace JsonToEFSeed
             foreach (var json in obj.weapons)
             {
                 Console.WriteLine
-                ($"var weapon{counter} = new Weapon() \n {{Name = \"{json.Weapon}\", \n AttackPower = new AttackPower() \n {{ \n Magic = {json.Magic}, \n Physical = {json.Phy}, \n Critical = {json.Crit}, \n Dark = {json.Dark}, \n Fire = {json.Fire}, \n Lightning = {json.Light} \n }}, \n StatRequirement = new StatRequirements() \n {{ \n Strength = {json.STR}, \n Dexterity = {json.DEX}, \n Faith = {json.FTH}, \n Intelligence = {json.INT} \n }}, \n AdditionalEffects = new AdditionalEffects() \n {{ \n Bleed = {json.Bleed}, \n Poison = {json.Poison}, \n Frost = {json.Frost} \n }} \n }};");
+                ($" new Weapon() \n {{ \n Name = \"{json.Weapon}\", \n AttackPower = new AttackPower() \n {{ \n Magic = {json.Magic}, \n Physical = {json.Phy}, \n Critical = {json.Crit}, \n Dark = {json.Dark}, \n Fire = {json.Fire}, \n Lightning = {json.Light} \n }}, \n StatRequirements = new StatRequirements() \n {{ \n Strength = {json.STR}, \n Dexterity = {json.DEX}, \n Faith = {json.FTH}, \n Intelligence = {json.INT} \n }}, \n AdditionalEffects = new AdditionalEffects() \n {{ \n Bleed = {json.Bleed}, \n Poison = {json.Poison}, \n Frost = {json.Frost} \n }} \n }},");
+                // place the output into a new List<Weapon>() { outputgoeshere }
                 counter++;
             }
         }
@@ -78,8 +76,6 @@ namespace JsonToEFSeed
             }
             var weapondata = JsonConvert.DeserializeObject<RootObject>(rawResponse);
 
-            //logWeaponProperties(weapondata);
-            //Console.ReadLine();
             logSeed(weapondata);
             Console.ReadLine();
         }

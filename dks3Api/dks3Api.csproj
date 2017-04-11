@@ -199,8 +199,12 @@
     <Compile Include="Migrations\201704110141010_Added seed data.Designer.cs">
       <DependentUpon>201704110141010_Added seed data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704111730071_Numerical properties are nullable.cs" />
+    <Compile Include="Migrations\201704111730071_Numerical properties are nullable.Designer.cs">
+      <DependentUpon>201704111730071_Numerical properties are nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DbContext.cs" />
+    <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\WeaponProps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704110141010_Added seed data.resx">
       <DependentUpon>201704110141010_Added seed data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111730071_Numerical properties are nullable.resx">
+      <DependentUpon>201704111730071_Numerical properties are nullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

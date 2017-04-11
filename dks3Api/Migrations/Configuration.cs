@@ -10,7 +10,7 @@ namespace dks3Api.Migrations
     using System.Linq;
     using System.Net;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<dks3Api.Models.dks3ApiContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDBContext>
     {
         public Configuration()
         {
@@ -18,7 +18,7 @@ namespace dks3Api.Migrations
         }
 
 
-        protected override void Seed(dks3Api.Models.dks3ApiContext context)
+        protected override void Seed(ApplicationDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -33,6 +33,7 @@ namespace dks3Api.Migrations
             //    );
             //
 
+            //TODO: Why aren't these in the database?
             var weapons = new List<Weapon>();
             {
                 var weapon0 = new Weapon()
@@ -4950,7 +4951,7 @@ namespace dks3Api.Migrations
                     }
                 };
             }
-            context.Weapons.AddRange(weapons);
+            weapons.ForEach(weapon => context.Weapons.AddOrUpdate(w => w.Name, weapon));
             context.SaveChanges();
         }
     }

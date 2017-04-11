@@ -13,7 +13,7 @@ namespace dks3Api.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public double Weight { get; set; }
-        public int Durability { get; set; }
+        public int? Durability { get; set; }
 
         #region WeaponProps
         [Display(Name = "Damage Type")] public string DamageType { get; set; }
